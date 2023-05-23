@@ -5,7 +5,7 @@ Hey there! I created a repository to keep all the exercise codes and challenges 
 So, whenever I attend any of these training, I'll update the repository with new activities.
 
 ## [Basic Back-End Programming](https://cursos.sesisenai.org.br/detalhes/programacao-basica-em-back-end/34150/79937)
-*Working in progress*
+*Finished*
 
 This course is for students interested in learning the basics of back-end programming. Classes explore the fundamental concepts of the JavaScript programming language and the Node.js platform, which are highly popular and in demand in today's market and are used in various segments.
 
