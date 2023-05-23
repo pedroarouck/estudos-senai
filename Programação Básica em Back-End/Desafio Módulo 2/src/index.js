@@ -126,8 +126,19 @@ router
    * Método PUT: atualizar as informações de um usuário específico
    * Acesso: PUT https://6j07g.sse.codesandbox.io/api/usuarios/:usuario_id
    */
-
-  //Implementar aqui a rota de edição do método HTTP PUT
+  .put(function (req, res) {
+    Usuario.findById(req.params.usuario_id, function (error, usuario) {
+      if (error) res.send(error);
+      //A solicitação envia os dados para serem validados pelo esquema 'usuario'
+      usuario.nome = req.body.nome;
+      usuario.login = req.body.login;
+      usuario.senha = req.body.senha;
+      usuario.save(function (error) {
+        if (error) res.send(error);
+        res.json({ message: "Usuário atualizado com sucesso!" });
+      });
+    });
+  })
 
   /**
    * Método DELETE: deletar um usuário específico
